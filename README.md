@@ -1,5 +1,5 @@
 # Personal Portfolio ⚡️ 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+> A clean, beautiful, responsive portfolio template for Nerds!
 
 > https://g-g-thorat.github.io
 
