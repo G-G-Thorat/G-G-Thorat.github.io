@@ -37,6 +37,7 @@
 ✔️ Skills \
 ✔️ Education\
 ✔️ Contact Info\
+✔️ Blogs\
 ✔️ Resume
 
 To view a live example, **[click here](https://g-g-thorat.github.io/)**
