@@ -111,25 +111,52 @@
 		<img alt="score" src="/assets/img/score.png" class="responsive-img center-block" />
 		</p>
 		<br>
-		<h4><b>Contribution - </b></h4>
-        <!-- <p>
-          
-          Detail-oriented Software Developer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
+		<h4><b>Contribution - RandomForest Classifier</b></h4>
         <p>
-          Looking for an opportunity to work in a challenging position combining my skills in Machine Learning and Data Science, which provides professional development, interesting experiences and personal growth.
+          The objective was to improve the original score that was secured by following the titanic tutorial in Kaggle.
         </p>
-        <!-- <p>
-          Another Paragraph
-        </p>  -->
-        <!-- <p>
-        <strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the Inclusive Design Patterns homepage"
-          href="https://www.smashingmagazine.com/inclusive-design-patterns/">Accessibility</a>&nbsp;//&nbsp;<a
-          aria-label="Navigate to the Full Stack React homepage"
-          href="https://www.fullstackreact.com/">React</a>&nbsp;//&nbsp;<a
-          aria-label='Navigate to the article "Scalable CSS"'
-          href="https://mrmrs.github.io/writing/2016/03/24/scalable-css/">Design Systems</a>
-        </p> -->
+		<P>
+		Firstly, identify the unique values of the training dataset.
+		</p>
+		<img alt="unique" src="/assets/img/unique.png" class="responsive-img center-block" />
+		<p>
+		Now, visualizing the dataset Bar graph
+		</p>
+		<img alt="bar" src="/assets/img/bar.png" class="responsive-img center-block" />
+		<p>
+		Here, we can see the rate of survivability of women is higher than men and thus lot of other features are too, need to be considered to get a higher desired accuracy
+		</p>
+		<br>
+		<p>
+		Now, we need to clean the data for all the null values.
+		</P>
+		<img alt="null" src="/assets/img/null.png" class="responsive-img center-block" />
+		<p>
+		Secondly, we need replace null values of few columns like Age and Embarked, with its mean values
+		</p>
+		<img alt="emb" src="/assets/img/emb.png" class="responsive-img center-block" /> 
+		<p>
+		Now, using the 'lambda' function, convert the data from Age and Embarked to lexiographical dictionary data to numbers.
+		</p>
+		<img alt="lambda" src="/assets/img/lambda.png" class="responsive-img center-block" />
+        <p>
+		The Model was predicted using the Random Forest Classifier. 
+		In this method, a number of binary trees are used to make predictions based on the conditions. E.g. If Gender =female -> Pclass = 1st -> Survived
+		</p>
+		<img alt="rfc" src="/assets/img/rfc.png" class="responsive-img center-block" />
+		<p>
+		Using the Random Forest Classifier the output was generated and accuracy was increased upto 78.4%
+		</p>
+		<img alt="output" src="/assets/img/output.png" class="responsive-img center-block" />
+		<br>
+		<h4><b>References - </b></h4>
+		<p>
+		1. <a href="https://medium.com/@praveen.orvakanti/this-will-help-you-score-95-percentile-in-the-kaggle-titanic-ml-competition-aa2b3fd1b79b">Higher Percentage upto 90%</a>
+		2. <a href="https://www.britannica.com/topic/Titanic">Titanic Disaster Prediction</a>
+		3. <a href="https://www.educative.io/courses/predictive-data-analysis-with-python">Predictive Analysis</a>
+		4. <a href="https://www.geeksforgeeks.org/python-introduction-matplotlib/">Graph Plots</a>
+		5. <a href=" https://jalammar.github.io/visual-interactive-guide-basics-neural-networks/">Canvas info</a>
+		</p>
       </div>
     </section>
 	</main>
