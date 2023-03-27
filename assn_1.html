@@ -76,16 +76,18 @@
 			<br>
 			So, let's proceed with the tutorial on how to build this image classifier.
 		</p>
-		<br>
+		
 		<p>
 		<b>Preface :</b>
+		<br>
 		As mentioned in reference [5], computer vision is a rapidly growing field within the information technology sector that focuses on teaching machines how to interpret images and videos. This technology is essential for the development of various applications such as robotics, self-driving vehicles, and facial recognition systems. At the core of computer vision lies image recognition, which involves identifying the category to which an image belongs. 
 		<br>
 		With that in mind, let's explore some related terminologies in greater detail.
 		</p>
-		<br>
+		
 		<p>
 		<b>Image Classification :</b>
+		<br>
 		Reference [4] defines image classification as the process of categorizing or assigning labels to entire images, with the assumption that each image belongs to just one class. To achieve this, images are inputted into classification models, which predict the specific category to which an image belongs.
 		<br>
 		Well, here's an example to illustrate the process of image classification:
@@ -98,7 +100,7 @@
 		<br>
 		In order to classify our images, we will construct a model using Convolutional Neural Network (CNN) architecture. Before we proceed, let's explore the definition of CNN.
 		</p>
-		<br>
+		
 		<p>
 		<b>What does Convolutional Neural Network (CNN) means ?</b>
 		Convolutional neural networks (CNN) are a type of artificial neural network (ANN) used most frequently in deep learning to interpret visual data as stated in [8].
@@ -107,20 +109,21 @@
 		The CNN has 3 main layers — convolution layer, pooling layer and fully connected layer as stated in [10].
 		<br>
 		1. Convolution Layer:
-		<br>
+		
 		<p>The neurons within a convolutional layer execute the convolution operation on the inputs they are given. The usual hyperparameters associated with a convolutional layer are the <i>Filter</i> and <i>Stride</i>.</p>
-		<br>
+		
 		2. Pooling Layer:
-		<br>
+		
 		<p>By implementing pooling layers, it is possible to decrease the input size, which results in faster processing and analysis of the data. Typically, convolutional layers are succeeded by pooling layers, which help reduce the spatial dimensions (width and height) of the input, leading to a reduction in computational requirements. The hyperparameters associated with a pooling layer are the <i>Stride</i>, <i>Max or average pooling</i>, and <i>Filter size</i>.</p>
-		<br>
+		
 		3. Fully Connected Layer:
-		<br>
+		
 		<p>Fully connected layers are named as such because they connect each neuron in one layer to every neuron in the next layer. In these layers, every input dimension and output dimension work in tandem, resulting in complete interconnectivity between the two layers.</p>
 		</p>
-		<br>
+		
 		<p>
-		<b>Also, What is Overfitting ?<b>
+		<b>Also, What is Overfitting ?</b>
+		<br>
 		Overfitting occurs when a model is trained on a dataset so well that it starts to capture the noise and details specific to the training data, which can lead to a decline in the model's performance when presented with new data. In other words, the model starts to learn not only the underlying patterns in the data but also the noise and fluctuations specific to the training dataset. As a result, the model may become too complex and fail to generalize well to new data.
 		<img alt="dataset" src="/assets/img/overfit.jpg" class="responsive-img center-block" />
 		One such scenario can be: where a machine learning model is trained to identify the difference between cats and dogs using a dataset of images. If the model is trained on a small dataset and is too complex, it may memorize the images in the training dataset, including noise and irrelevant features specific to that dataset. As a result, the model may perform very well on the training data but may fail to generalize to new images of cats and dogs. This is because the model has not learned the underlying features that distinguish cats from dogs, but instead has learned the specific features present only in the training dataset. 
@@ -130,6 +133,7 @@
 		<br>
 		<p>
 		<b>TensorFlow :</b>
-		<img alt="" src="/assets/img/tensorflow-logo-1.png" class="responsive-img">
+		<br>
+		<img alt="" src="/assets/img/tensorflow-logo-1.png" class="responsive-img" width="50" height="50">
 		<br>
 		
