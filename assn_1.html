@@ -1,0 +1,135 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>Gaurav Thorat | Titanic Blog</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-126939217-2');
+  </script>
+
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GT | Data Scientist" />
+  <meta property="og:description" content="Data Scientist" />
+  <meta property="og:url" content="https://G-G-thorat.github.io/" />
+  <meta property="og:site_name" content="GT | Data Scientist" />
+  <meta property="article:publisher" content="https://G-G-thorat.github.io/" />
+  <meta property="og:image" content="https://G-G-thorat.github.io" />
+  
+  
+  <!-- Google Site Verification for indexing -->
+  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  
+  <!-- Main Content-->
+  <main>
+	<section id="blogs" class="section scrollspy">
+      <h3 class="page-title white-text teal">Facial Emotion Expressions</h3>
+	<form action = "https://g-g-thorat.github.io/">
+		<button class="btn" type="submit"><i class="fa fa-home"></i> Home</button>
+		</form>
+	<form action = "https://github.com/G-G-Thorat/Titanic_Blog">
+		<button class="btn" type="submit"><i class="fa fa-github"></i> Code</button>
+		</form>
+      <div class="container flow-text">
+	    <img alt="facial_emotion_detecttion" src="/assets/img/cover.png" class="responsive-img center-block" width="500" height="300"/>
+		<br>
+        <h4><b>Image Classification for Facial Emotion Expressions</b></h4>
+		<p>
+			The primary goal of this blog post is to guide you through the process of constructing an 
+			image classifier for a facial emotion dataset [7]. The dataset, which can be found on Kaggle under the name <a href="https://www.kaggle.com/datasets/samaneheslamifar/facial-emotion-expressions">Facial Emotion Expressions</a>, consists of over 35000 images each of faces under categories of angry, sad, happy, neutral, disgust, fear and surprise. Our image classifier model will be built using Convolution Neural Network (CNN). 
+			<br>
+			In this regard, I have already developed the same and shared it on my 
+			Kaggle notebook called <a href="https://github.com/G-G-Thorat/DM_Assn_1/blob/main/facial-expression.ipynb">facial_emotion_notebook</a>.
+			<br>
+			So, let's proceed with the tutorial on how to build this image classifier.
+		</p>
+		<br>
+		<p>
+		<b>Preface :<b>
+		As mentioned in reference [5], computer vision is a rapidly growing field within the information technology sector that focuses on teaching machines how to interpret images and videos. This technology is essential for the development of various applications such as robotics, self-driving vehicles, and facial recognition systems. At the core of computer vision lies image recognition, which involves identifying the category to which an image belongs. 
+		<br>
+		With that in mind, let's explore some related terminologies in greater detail.
+		</p>
+		<br>
+		<p>
+		<b>Image Classification :</b>
+		Reference [4] defines image classification as the process of categorizing or assigning labels to entire images, with the assumption that each image belongs to just one class. To achieve this, images are inputted into classification models, which predict the specific category to which an image belongs.
+		<br>
+		Well, here's an example to illustrate the process of image classification:
+		Suppose we have a dataset consisting of various images of animals, including dogs, cats, and birds. The goal of image classification is to create a model that can accurately predict the class of each image. To train the model, we would input the images along with their corresponding labels (i.e., the animal species) into the algorithm.
+		<br>
+		During the training process, the model learns to recognize the distinguishing features of each animal class by analyzing the input images. Once the training is complete, we can use the model to predict the class of new, unseen images by feeding them into the algorithm.
+		<br>
+		For instance, if we input a picture of a cat into the model, it should accurately predict that the image belongs to the cat class. Similarly, if we input a picture of a bird, the model should predict that the image belongs to the bird class.
+		<img alt="dataset" src="/assets/img/img_class.png" class="responsive-img center-block" />
+		<br>
+		In order to classify our images, we will construct a model using Convolutional Neural Network (CNN) architecture. Before we proceed, let's explore the definition of CNN.
+		</p>
+		<br>
+		<p>
+		<b>What does Convolutional Neural Network (CNN) means ?</b>
+		Convolutional neural networks (CNN) are a type of artificial neural network (ANN) used most frequently in deep learning to interpret visual data as stated in [8].
+		<img alt="dataset" src="/assets/img/face.jpg" class="responsive-img center-block" />
+		<br>
+		The CNN has 3 main layers — convolution layer, pooling layer and fully connected layer as stated in [10].
+		<br>
+		1. Convolution Layer:
+		<br>
+		<p>The neurons within a convolutional layer execute the convolution operation on the inputs they are given. The usual hyperparameters associated with a convolutional layer are the <i>Filter</i> and <i>Stride</i>.</p>
+		<br>
+		2. Pooling Layer:
+		<br>
+		<p>By implementing pooling layers, it is possible to decrease the input size, which results in faster processing and analysis of the data. Typically, convolutional layers are succeeded by pooling layers, which help reduce the spatial dimensions (width and height) of the input, leading to a reduction in computational requirements. The hyperparameters associated with a pooling layer are the <i>Stride</i>, <i>Max or average pooling</i>, and <i>Filter size</i>.</p>
+		<br>
+		3. Fully Connected Layer:
+		<br>
+		<p>Fully connected layers are named as such because they connect each neuron in one layer to every neuron in the next layer. In these layers, every input dimension and output dimension work in tandem, resulting in complete interconnectivity between the two layers.</p>
+		</p>
+		<br>
+		<p>
+		<b>Also, What is Overfitting ?<b>
+		Overfitting occurs when a model is trained on a dataset so well that it starts to capture the noise and details specific to the training data, which can lead to a decline in the model's performance when presented with new data. In other words, the model starts to learn not only the underlying patterns in the data but also the noise and fluctuations specific to the training dataset. As a result, the model may become too complex and fail to generalize well to new data.
+		<img alt="dataset" src="/assets/img/overfit.jpg" class="responsive-img center-block" />
+		One such scenario can be: where a machine learning model is trained to identify the difference between cats and dogs using a dataset of images. If the model is trained on a small dataset and is too complex, it may memorize the images in the training dataset, including noise and irrelevant features specific to that dataset. As a result, the model may perform very well on the training data but may fail to generalize to new images of cats and dogs. This is because the model has not learned the underlying features that distinguish cats from dogs, but instead has learned the specific features present only in the training dataset. 
+		<br>
+		For developing image classification models, we are also goint to use Tensorflow.
+		</p>
+		<br>
+		<p>
+		<b>TensorFlow :</b>
+		<img alt="" src="/assets/img/tensorflow-logo-1.png" class="responsive-img">
+		<br>
+		
