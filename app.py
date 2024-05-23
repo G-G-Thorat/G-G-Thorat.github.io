@@ -42,7 +42,7 @@ embeddings = HuggingFaceEmbeddings(model_name="distilbert-base-uncased")
 vector_store = Chroma.from_documents(docs, embeddings)
 
 # Initialize OpenAI LLM
-openai_api_key = os.getenv('sk-proj-yj6XG56T2D7FiPZfEj0xT3BlbkFJkmR3rQDfSPeAPDk5Ry54')
+openai_api_key = os.getenv('sk-proj-FGyQimcLGmqbomRzYd5JT3BlbkFJMt8komV9JqdBOP0EOPkN')
 llm = OpenAI(api_key=openai_api_key)
 
 # Create a conversational retrieval chain
