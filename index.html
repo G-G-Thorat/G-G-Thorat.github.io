@@ -266,6 +266,17 @@
       </div>
     </section>
 
+	  <!-- Chatbot Section -->
+        <section id="chat" class="section scrollspy">
+            <h3 class="page-title white-text teal">Ask Me</h3>
+            <div class="container">
+                <div id="chat-box">
+                    <div id="chat-log"></div>
+                    <input type="text" id="user-input" placeholder="Type your message here...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
 
     <!-- Third Section: Experience -->
     <section id="experience" class="section scrollspy">
@@ -1224,7 +1235,24 @@ Contributed to a 20% reduction in resolution time by equipping teams with the ne
     });
   </script>
 
-
+<!-- Chatbot JavaScript -->
+    <script>
+        function sendMessage() {
+            var userMessage = $("#user-input").val();
+            $("#chat-log").append("<p><strong>You:</strong> " + userMessage + "</p>");
+            $.ajax({
+                type: "POST",
+                url: "https://portfolio-gt-d8d53e670ce9.herokuapp.com/chat",  // Replace with your Flask app URL
+                contentType: "application/json",
+                data: JSON.stringify({ message: userMessage }),
+                success: function(response) {
+                    $("#chat-log").append("<p><strong>Chatbot:</strong> " + response.response + "</p>");
+                    $("#user-input").val("");
+                }
+            });
+        }
+    </script>
+	
   <!-- jQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
